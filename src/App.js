@@ -9,8 +9,8 @@ class App extends Component {
     render() {
         return (
             [
-                <WelCome name={'wwx'}/>,
-                <PostList/>
+                <WelCome key= 'WelCome' name={'wwx'}/>,
+                <PostList key = 'PostList'/>
 
             ]
         );

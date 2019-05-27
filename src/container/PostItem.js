@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
+import './PostItem.css'
+import dianzanImg from '../img/dianzan.png'
 
 function PostItem(props) {
 
@@ -13,15 +15,14 @@ function PostItem(props) {
     };
     post = props.post;
 
-    return (<li>
-        <div>{post.title}</div>
+    return (<li className='item'>
+        <div className='title'>{post.title}</div>
         <div>创建人：<span>{post.author}</span></div>
         <div>创建时间：<span>{post.date}</span></div>
-        <div>
-            <button onClick={handleClick}>点赞
-            </button>
-            &nbsp;
-            <span>{post.vote}</span>
+        <div className='like'>
+            <span><img src={dianzanImg} alt='' onClick={handleClick}/>
+            </span>
+            <span>&nbsp;&nbsp;{post.vote}</span>
         </div>
     </li>);
 }

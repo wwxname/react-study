@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PostItem from './PostItem';
-
-const data = [
-    {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
-    {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
-    {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
-    {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"}
-];
+import './PostList.css'
+// const data = [
+//     {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
+//     {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
+//     {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"},
+//     {title: "大家一起讨论react", author: "哈哈哈", date: "2017 08 09"}
+// ];
 
 class PostList extends Component {
     handleVote(id) {
@@ -56,12 +56,13 @@ class PostList extends Component {
     }
 
     render() {
-        return (<div>
-            帖子列表：
+        return (<div className='container'>
+            帖子列表
             <ul>
                 {
                     this.state.posts.map(item => {
                         return <PostItem
+                            key={item.id}
                         post = {item}
                         onVote={this.handleVote}
                         />
