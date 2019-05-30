@@ -16,7 +16,7 @@ function PostItem(props) {
     post = props.post;
 
     return (<li className='item'>
-        <div className='title'>{post.title}</div>
+        <div  className='title'>{post.title}</div>
         <div>创建人：<span>{post.author}</span></div>
         <div>创建时间：<span>{post.date}</span></div>
         <div className='like'>
